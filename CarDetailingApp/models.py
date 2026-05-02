@@ -54,3 +54,7 @@ class Booking(models.Model):
     date = models.DateField()
     time = models.TimeField()
     created_at = models.DateTimeField(auto_now_add = True)
+
+    def __str__(self) -> str:
+        return f"{self.name} | {self.service} | {self.date} {self.time}"
+    
